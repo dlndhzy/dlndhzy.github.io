@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -6,41 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>闪井齐 - 个人主页</title>
     <style>
+        /* ===== 全局重置与背景 ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            max-width: 760px;
-            margin: 60px auto;
-            padding: 0 20px;
-            line-height: 1.7;
-            color: #1e293b;
-            background-color: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+
+            /* 🌟 背景图片：使用一张优雅的渐变色+几何图案的在线图片 */
+            background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926?w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+
+            /* 如果图片加载慢或失败，后备纯色背景 */
+            background-color: #1e293b;
         }
+
+        /* ===== 半透明毛玻璃卡片 ===== */
+        .card {
+            max-width: 760px;
+            width: 100%;
+            padding: 40px 45px;
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.30);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+        }
+
         h1 {
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             margin-bottom: 0.2rem;
             color: #0f172a;
+            letter-spacing: -0.5px;
         }
+
         .subhead {
             font-size: 1.1rem;
             color: #475569;
             margin-top: 0;
             margin-bottom: 1.8rem;
-            border-bottom: 1px solid #e2e8f0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
             padding-bottom: 0.8rem;
         }
+
         a {
             color: #2563eb;
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
+            color: #1d4ed8;
         }
+
         ul {
             padding-left: 1.2rem;
         }
         li {
             margin-bottom: 0.4rem;
         }
+
         .section-title {
             font-weight: 600;
             font-size: 1.2rem;
@@ -48,42 +88,50 @@
             margin-bottom: 0.6rem;
             color: #0f172a;
         }
+
         .footer {
             margin-top: 2.5rem;
             font-size: 0.9rem;
             color: #94a3b8;
-            border-top: 1px solid #e2e8f0;
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
             padding-top: 1.2rem;
+            text-align: center;
+        }
+
+        /* ===== 手机自适应 ===== */
+        @media (max-width: 600px) {
+            .card {
+                padding: 28px 20px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
 <body>
-
-    <h1>闪井齐(Jingqi Shan)</h1>
-    <div class="subhead">
-        硕士研究生 · 计算机科学与技术<br />
-        北京科技大学
+        <div class="card">
+            <h1>闪井齐(Jingqi Shan)</h1>
+        <div class="subhead">
+            硕士研究生 · 计算机科学与技术<br />
+            北京科技大学
+        </div>
+        <p>
+            <strong>邮箱：</strong> m202510675@xs.ustb.edu.cn<br />
+            <strong>GitHub：</strong> <a href="https://github.com/dlndhzy">@dlndhzy</a>
+        </p>
+        <div class="section-title">📌 研究方向</div>
+        <ul>
+            <li>自然语言处理（NLP）</li>
+        </ul>
+        <div class="section-title">📄 关于我</div>
+        <p>
+            我是北京科技大学计算机科学与技术系的硕士研究生。
+            在此之前，我于 2025 年获得北京科技大学计算机科学与技术学士学位。
+        </p>
+        <div class="footer">
+            © 2026 闪井齐 · 主页由 GitHub Pages 驱动
+        </div>
     </div>
-
-    <p>
-        <strong>邮箱：</strong> m202510675@xs.ustb.edu.cn<br />
-        <strong>GitHub：</strong> <a href="https://github.com/dlndhzy">@dlndhzy</a>
-    </p>
-
-    <div class="section-title">📌 研究方向</div>
-    <ul>
-        <li>自然语言处理（NLP）</li>
-    </ul>
-
-    <div class="section-title">📄 关于我</div>
-    <p>
-        我是北京科技大学计算机科学与技术系的硕士研究生。
-        在此之前，我于 2025 年获得北京科技大学计算机科学与技术学士学位。
-    </p>
-
-    <div class="footer">
-        © 2026 闪井齐 · 主页由 GitHub Pages 驱动
-    </div>
-
 </body>
 </html>
